@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body, document, #_next{
-    @apply h-full
-}
+
 
 .btn{
     @apply rounded-full
