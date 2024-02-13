@@ -7,6 +7,7 @@ import Home from "./pages/Home"
 import About from "./pages/About"
 import Products from "./pages/Products"
 import Alexa from "./pages/Alexa"
+import LeftHanded from "./pages/LeftHanded"
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/about" element={<About/>}/>
           <Route path="/products" element={<Products/>}/>
           <Route path="/alexa" element={<Alexa/>}/>
+          <Route path="/left-handed" element={<LeftHanded/>}/>
         </Routes>
         </BrowserRouter>
       </main>
