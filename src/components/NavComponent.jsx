@@ -6,7 +6,7 @@ import 'aos/dist/aos.css'
 const NavComponent = () => {
 
   useEffect(() => {
-    Aos.init({ duration: 3000 })
+    Aos.init({ duration: 2500 })
   }, [])
 
   return (
@@ -19,7 +19,7 @@ const NavComponent = () => {
           <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
             <li><NavLink to="/alexa">Alexa</NavLink></li>
             <li><NavLink to="/left-handed">Canhotos</NavLink></li>
-            <li><NavLink to="/products">Produtos</NavLink></li>
+            <li><NavLink to="/categories">Categorias</NavLink></li>
           </ul>
         </div>
         <NavLink to="/" className="btn btn-ghost text-xl">daisyUI</NavLink>
@@ -27,16 +27,8 @@ const NavComponent = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li><NavLink to="/alexa">Alexa</NavLink></li>
-          <li>
-            <details>
-              <summary>Categorias</summary>
-              <ul className="p-2">
-                <li><NavLink>Roupas</NavLink></li>
-                <li><NavLink>Melhores ofertas</NavLink></li>
-              </ul>
-            </details>
-          </li>
-          <li><NavLink>Item 3</NavLink></li>
+          <li><NavLink to="/left-handed">Canhotos</NavLink></li>
+          <li><NavLink to="/categories">Categorias</NavLink></li>
         </ul>
       </div>
       <div className="navbar-end">
