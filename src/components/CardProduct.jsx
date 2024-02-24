@@ -1,20 +1,39 @@
+import { toast } from "sonner"
+
 
 const CardProduct = () => {
-  return (
 
-    <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
-      <div class="md:flex">
-        <div class="md:shrink-0">
-          <img class="h-1 w-full object-cover md:h-full md:w-48" src="https://images.unsplash.com/photo-1558098329-a11cff621064?q=80&w=1290&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Modern building architecture" />
-        </div>
-        <div class="p-8">
-          <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Company retreats</div>
-          <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Incredible accommodation for your team</a>
-          <p class="mt-2 text-slate-500">Olhe</p>
+  function handleTeste(event) {
+    event.preventDefault()
+
+    const promise = () => new Promise((resolve) => setTimeout(() => resolve({ name: 'Item' }), 500));
+
+    toast.promise(promise, {
+      loading: 'Carregando',
+      success: (data) => {
+        return `${data.name} adicionado ao carrinho`;
+      },
+      error: 'Error',
+    });
+  }
+
+  return (
+    <div className=" card card-compact w-96 sm:w-28 md:w-52 lg:w-80 bg-base-100 shadow-xl">
+      <figure><img className="" src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+      <div className="card-body">
+        <h2 className="card-title">Shoes!</h2>
+        <p>If a dog chews shoes whose shoes does he choose?</p>
+        <div className="card-actions justify-end">
+          <button
+            className="btn btn-primary"
+            onClick={handleTeste}
+          >
+            Buy Now
+          </button>
         </div>
       </div>
     </div>
-          )
+  )
 }
 
-          export default CardProduct
+export default CardProduct

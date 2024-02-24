@@ -22,7 +22,7 @@ const NavComponent = () => {
             <li><NavLink to="/categories">Categorias</NavLink></li>
           </ul>
         </div>
-        <NavLink to="/" className="btn btn-ghost text-xl">daisyUI</NavLink>
+        <NavLink to="/" className="btn btn-ghost text-xl">Conectacompra</NavLink>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -35,8 +35,6 @@ const NavComponent = () => {
         <NavLink className="btn">Button</NavLink>
       </div>
     </div>
-
-
   )
 }
 
