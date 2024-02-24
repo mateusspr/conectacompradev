@@ -8,6 +8,7 @@ import About from "./pages/About"
 import Categories from "./pages/Categories"
 import Alexa from "./pages/Alexa"
 import LeftHanded from "./pages/LeftHanded"
+import FooterComponent from "./components/FooterComponent"
 
 function App() {
 
@@ -15,14 +16,15 @@ function App() {
     <>
       <main className="flex flex-col col-auto">
         <BrowserRouter>
-        <NavComponent/>
-        <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/about" element={<About/>}/>
-          <Route path="/categories" element={<Categories/>}/>
-          <Route path="/alexa" element={<Alexa/>}/>
-          <Route path="/left-handed" element={<LeftHanded/>}/>
-        </Routes>
+          <NavComponent />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/categories" element={<Categories />} />
+            <Route path="/alexa" element={<Alexa />} />
+            <Route path="/left-handed" element={<LeftHanded />} />
+          </Routes>
+          <FooterComponent />
         </BrowserRouter>
       </main>
     </>
